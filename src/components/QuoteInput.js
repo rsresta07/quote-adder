@@ -7,18 +7,18 @@ function QuoteInput({ addQuote }) {
     const handleAddQuote = () => {
         // Validate inputs
         if (quote.trim() === "") {
-            alert("Quote cannot be empty."); // Alert for empty quote
+            alert("Quote cannot be empty.");
             return;
         }
         if (username.trim() === "") {
-            alert("Username cannot be empty."); // Alert for empty username
+            alert("Username cannot be empty.");
             return;
         }
 
         // Add quote if inputs are valid
-        addQuote(`${username}: ${quote}`); // Prepend username to quote
-        setQuote(""); // Reset quote input
-        setUsername(""); // Reset username input
+        addQuote(`${username}: ${quote}`);
+        setQuote("");
+        setUsername("");
     };
 
     return (
@@ -28,8 +28,8 @@ function QuoteInput({ addQuote }) {
                 value={quote}
                 onChange={(e) => setQuote(e.target.value)}
                 placeholder="Enter your quote here..."
-                className="w-full p-2 border rounded mb-2 resize-none" // Full width and no resizing
-                rows="4" // Specify the number of rows for the textarea
+                className="w-full p-2 border rounded mb-2 resize-none"
+                rows="4" 
             />
 
             {/* Container for username input and button */}
@@ -39,11 +39,11 @@ function QuoteInput({ addQuote }) {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     placeholder="Enter your name..."
-                    className="w-2/3 p-2 border rounded mr-2" // Adjust width and margin
+                    className="w-2/3 p-2 border rounded mr-2" 
                 />
                 <button
                     onClick={handleAddQuote}
-                    className="bg-blue-500 text-white px-4 rounded hover:bg-blue-600" // Decreased height
+                    className="bg-blue-500 text-white px-4 rounded hover:bg-blue-600" 
                 >
                     Add
                 </button>
